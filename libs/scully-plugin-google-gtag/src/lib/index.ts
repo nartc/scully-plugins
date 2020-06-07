@@ -53,7 +53,7 @@ function gaPluginHandler(html: string) {
   html = html.replace(
     '<head>',
     `
-<link
+<head><link
   rel="preconnect dns-prefetch"
   key="preconnect-google-analytics"
   href="https://www.google-analytics.com"
@@ -111,7 +111,7 @@ if(${
     html.replace(
       '<head>',
       `
-<script
+<head><script
   key={'scully-plugin-google-analytics'}
   async
   src={'https://www.googletagmanager.com/gtag/js?id=${firstTrackingId}'}
