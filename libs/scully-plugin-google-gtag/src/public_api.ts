@@ -3,4 +3,4 @@ export {
   GoogleAnalyticsGtagConfig,
   GoogleAnalyticsConfig,
   getGaPlugin,
-} from './lib';
+} from './lib/index';
