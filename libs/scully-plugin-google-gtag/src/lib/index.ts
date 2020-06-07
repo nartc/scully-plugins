@@ -27,6 +27,7 @@ export interface GoogleAnalyticsPluginConfig {
  */
 export interface GoogleAnalyticsConfig {
   trackingIds: string[];
+  dryRun?: boolean;
   gtagConfig: GoogleAnalyticsGtagConfig;
   pluginConfig: GoogleAnalyticsPluginConfig;
 }
@@ -38,7 +39,13 @@ const GaPlugin = 'gaPlugin';
  * @link https://www.gatsbyjs.org/packages/gatsby-plugin-google-gtag/
  */
 function gaPluginHandler(html: string) {
-  if (process.env.NODE_ENV !== 'production') {
+  const {
+    dryRun = false,
+    trackingIds,
+    gtagConfig = {},
+    pluginConfig = {},
+  } = getPluginConfig<GoogleAnalyticsConfig>(GaPlugin);
+  if (!dryRun && process.env.NODE_ENV !== 'production') {
     return Promise.resolve(html);
   }
 
@@ -53,10 +60,6 @@ function gaPluginHandler(html: string) {
 />
   `
   );
-
-  const { trackingIds, gtagConfig = {}, pluginConfig = {} } = getPluginConfig<
-    GoogleAnalyticsConfig
-  >(GaPlugin);
 
   // Prevent duplicate or excluded pageview events being emitted on initial load of page by the `config` command
   // https://developers.google.com/analytics/devguides/collection/gtagjs/#disable_pageview_tracking
