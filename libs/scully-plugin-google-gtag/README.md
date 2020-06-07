@@ -1,6 +1,7 @@
 # scully-plugin-google-gtag
 
 This is a `postRenderer` plugin that will append necessary `script` tags to initialize `gtag.js` to the Scully's pre-rendered pages' `<head>` tag.
+This plugin is based on [Gatsby's official Gtag plugin](https://www.gatsbyjs.org/packages/gatsby-plugin-google-gtag/)
 
 ### Installation
 
