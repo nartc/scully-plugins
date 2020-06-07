@@ -1,7 +1,61 @@
 {
   "version": 1,
-  "projects": {},
+  "projects": {
+    "scully-plugin-google-gtag": {
+      "projectType": "library",
+      "root": "libs/scully-plugin-google-gtag",
+      "sourceRoot": "libs/scully-plugin-google-gtag/src",
+      "prefix": "scully-plugins",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/scully-plugin-google-gtag/tsconfig.lib.json",
+            "project": "libs/scully-plugin-google-gtag/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/scully-plugin-google-gtag/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/scully-plugin-google-gtag/tsconfig.lib.json",
+              "libs/scully-plugin-google-gtag/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/scully-plugin-google-gtag/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/scully-plugin-google-gtag/jest.config.js",
+            "tsConfig": "libs/scully-plugin-google-gtag/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/scully-plugin-google-gtag/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    }
+  },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
-  }
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "scully-plugin-google-analytics"
 }

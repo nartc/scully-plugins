@@ -18,5 +18,9 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "scully-plugin-google-gtag": {
+      "tags": []
+    }
+  }
 }

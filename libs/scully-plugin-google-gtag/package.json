@@ -1,0 +1,20 @@
+{
+  "name": "@nartc/scully-plugin-google-gtag",
+  "version": "0.0.1",
+  "description": "A Scully plugin for adding Google Tag Manager to a Scully application.",
+  "peerDependencies": {
+    "@scullyio/scully": "latest",
+    "minimatch": ">=3"
+  },
+  "keywords": [
+    "angular",
+    "scully",
+    "google-analytics",
+    "gtag"
+  ],
+  "author": "Chau Tran <nartc7789@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

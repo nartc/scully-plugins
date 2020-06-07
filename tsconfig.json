@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@scully-plugins/scully-plugin-google-gtag": [
+        "libs/scully-plugin-google-gtag/src/public_api.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
