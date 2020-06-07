@@ -112,9 +112,9 @@ if(${
       '<head>',
       `
 <head><script
-  key={'scully-plugin-google-analytics'}
+  key='scully-plugin-google-analytics'
   async
-  src={'https://www.googletagmanager.com/gtag/js?id=${firstTrackingId}'}
+  src='https://www.googletagmanager.com/gtag/js?id=${firstTrackingId}'
 />
 <script id="scully-plugin-google-analytics">${renderScriptContent()}</script>
   `
