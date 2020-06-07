@@ -111,11 +111,12 @@ if(${
     html.replace(
       '<head>',
       `
-<head><script
+<head>
+<script
   key='scully-plugin-google-analytics'
   async
   src='https://www.googletagmanager.com/gtag/js?id=${firstTrackingId}'
-/>
+></script>
 <script id="scully-plugin-google-analytics">${renderScriptContent()}</script>
   `
     )
