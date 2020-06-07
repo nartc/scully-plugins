@@ -1,6 +1,6 @@
 {
   "name": "@nartc/scully-plugin-google-gtag",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Scully plugin for adding Google Tag Manager to a Scully application.",
   "peerDependencies": {
     "@scullyio/scully": "latest",
