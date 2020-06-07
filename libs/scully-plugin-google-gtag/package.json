@@ -6,6 +6,13 @@
     "@scullyio/scully": "latest",
     "minimatch": ">=3"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nartc/scully-plugins.git"
+  },
+  "maintainers": [
+    "Chau Tran <nartc7789@gmail.com>"
+  ],
   "keywords": [
     "angular",
     "scully",
@@ -16,5 +23,6 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "homepage": "https://github.com/nartc/scully-plugins/tree/master/libs/scully-plugin-google-gtag"
 }
